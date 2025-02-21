@@ -10,9 +10,11 @@
 <body class="bg-gray-100 flex justify-center items-center min-h-screen">
   <div class="bg-white p-12 rounded-lg shadow-lg w-full max-w-4xl animate-fadeIn">
     <h2 class="text-center text-3xl font-semibold mb-12">Registration Portal</h2>
-    <form class="space-y-16 flex flex-col gap-16">
+    <form class="space-y- flex flex-col gap-6">
       
       <!-- Company Information Block -->
+       <h2 class="text-2xl font-semibold">Company Information</h2>
+       <hr class="border-t border-gray-300">
       <div class="grid grid-cols-2 gap-5">
         <div>
           <label for="company-name" class="block font-medium mb-2">Company Name:</label>
@@ -25,7 +27,9 @@
       </div>
       
       <!-- User Information Block -->
-      <div class="space-y-8">
+       <h2 class="text-2xl font-semibold">Owner information</h2>
+       <hr class="border-t border-gray-300">
+      <div class="space-y-8 gap-">
         <div class="grid grid-cols-2 gap-6">
           <div>
             <label for="email" class="block font-medium mb-2">Email:</label>
@@ -49,6 +53,8 @@
       </div>
       
       <!-- Address Information Block -->
+       <h2 class="text-2xl font-semibold">Address Information</h2>
+       <hr class="border-t border-gray-300">
       <div class="space-y-6">
         <div class="grid grid-cols-2 gap-6">
           <div>
@@ -83,8 +89,10 @@
         <input type="checkbox" id="terms" name="terms" required>
         <label for="terms" class="text-sm">I agree to the Terms & Conditions</label>
       </div>
-      
-      <button type="submit" class="w-full bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600">Submit</button>
+      <div class="flex justify-between">
+      <button type="submit" class="w-1/4 bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600">Submit</button>
+      <button type="reset" class="w-1/4 text-red-600 border border-red-600 px-6 py-3 rounded-md hover:bg-red-600 hover:text-white">Cancle</button>
+    </div>
     </form>
   </div>
 </body>
