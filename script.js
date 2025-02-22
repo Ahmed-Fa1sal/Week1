@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
 
-    form.addEventListener("submit", async (e) => {
+    form.addEventListener("submit", (e) => {
         e.preventDefault();
 
         const companyName = document.getElementById("company-name").value.trim();
@@ -43,23 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        const formData = {
-            companyName, crNumber, email, phone, password, city, region, zip, businessType
-        };
-
-        try {
-            const response = await fetch("https://example.com/api/register", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData)
-            });
-
-            if (!response.ok) throw new Error("Registration failed.");
-
-            alert("Registration successful!");
-            form.reset();
-        } catch (error) {
-            alert(error.message);
-        }
+        alert("Registration successful!");
+        form.reset();
+        window.location.href = 'users.html';
     });
 });
